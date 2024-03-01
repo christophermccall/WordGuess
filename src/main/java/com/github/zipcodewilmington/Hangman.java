@@ -1,10 +1,6 @@
 package com.github.zipcodewilmington;
 
 import java.util.Random;
-
-/*find out hot to Generate a random word
-- use array inside of class?
-*/
 /**
  * @author xt0fer
  * @version 1.0.0
@@ -13,45 +9,19 @@ import java.util.Random;
 
 public class Hangman {
     //Chris McCall
-    private String grape;
-    private String orange;
-    private String toothpaste;
+    public static void main(String[] args){
 
-    public Hangman (String grape, String orange, String toothpaste){
+        String[] words = {
+                "grape", "orange", "red","ladder","shoe","tools"
+        };
+        Random rand = new Random();
+        int randint = rand.nextInt(6);
 
-        this.grape = grape;
-        this.orange = orange;
-        this.toothpaste = toothpaste;
 
+        System.out.println(words[randint]);
 
 
     }
+    }
+    
 
-        public String getGrape(){
-        return grape;
-        }
-
-        private void setGrape(String grape){
-        this.grape = grape;
-        }
-
-        public String getOrange(){
-        return orange;
-        }
-
-        private void setOrange(String orange){
-        this.orange = orange;
-        }
-
-        public String getToothpaste(){
-        return toothpaste;
-        };
-        private void setToothpaste(String toothpaste){
-            this.toothpaste = toothpaste;
-        }
-
-
-
-
-
-}
