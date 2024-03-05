@@ -15,6 +15,13 @@ public class main {
         //added _ for every letter position in guess
         guess.append("_".repeat(answer.length));
 
+        //Title
+
+        System.out.println("Welcome" + "\n" + "Guess a letter to begin");
+
+        System.out.println(guess);
+
+
         int i = 0;
         while (i < answer.length) {
             //take user's input
