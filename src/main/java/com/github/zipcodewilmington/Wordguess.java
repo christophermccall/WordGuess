@@ -10,6 +10,8 @@ import java.util.Random;
 public class Wordguess {
     //Chris McCall
     public int i=0;
+
+    char[] test = {'t','e','s','t'};
     char[] secret ={};
     static Scanner scanner = new Scanner(System.in);
 
