@@ -12,15 +12,23 @@ public class Wordguess {
     char[] secret = {};
     static Scanner scanner = new Scanner(System.in);
 
+
     public int getRandonmNumber() {
         Random rand = new Random();
         return rand.nextInt(6);
     }
 
     public char[] getSecret() {
-        //test "ladder" "ladder" "ladder" "ladder" "ladder" "ladder"
-        String[] words = {"grape", "orange", "red", "ladder", "shoe", "dare"};
+        //test "ladder", "ladder", "ladder", "ladder", "ladder", "ladder"
+        //word bank "grape", "orange", "red", "ladder", "shoe", "dare"
+        String[] words = {"ladder", "ladder", "ladder", "ladder", "ladder","ladder"};
+
         return this.secret = words[getRandonmNumber()].toCharArray();
+    }
+
+    public int userInput(){
+        int usin = scanner.nextInt();
+        return usin;
     }
 }
 
