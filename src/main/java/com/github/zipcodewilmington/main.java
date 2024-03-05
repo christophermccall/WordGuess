@@ -4,27 +4,30 @@ import java.util.Scanner;
 public class main {
 
     static Wordguess wordguess = new Wordguess();
-    static Scanner scanner = new Scanner(System.in);
 
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         char[] answer = wordguess.getSecret();
-        char[] userInput = wordguess.getUserInput();
-        char[] guess = wordguess.getGuess();
-        char[] test = new char[]{'t','e','s','t'};
+        // initialized a new stringbuilder with the same length as the answer.
+        StringBuilder guess = new StringBuilder(answer.length);
+        // replaced for loop with repeat method
+        //added _ for every letter position in guess
+        guess.append("_".repeat(answer.length));
 
         int i = 0;
         while (i < answer.length) {
-
-            System.out.print(guess);
-
-            wordguess.getUserInput();
+            //take user's input
+            char attempt = scanner.nextLine().charAt(0);
+            //if the user input matches any letter in the secret word
             for (int j = 0; j < answer.length; j++)
-                if (userInput[0] == answer[j]) {
-                    guess[j] = userInput[0];
+                if (attempt == answer[j]) {
+                    //set char used to update the guess log.
+                    guess.setCharAt(j,answer[j]);
                 }
+            // display new guess log
+            System.out.println(guess);
             i++;
         }
     }
 }
-

@@ -9,10 +9,7 @@ import java.util.Random;
 
 public class Wordguess {
     //Chris McCall
-    public int i=0;
-
-    char[] test = {'t','e','s','t'};
-    char[] secret ={};
+    char[] secret = {};
     static Scanner scanner = new Scanner(System.in);
 
     public int getRandonmNumber() {
@@ -20,27 +17,12 @@ public class Wordguess {
         return rand.nextInt(6);
     }
 
-    public  char[] getSecret() {
+    public char[] getSecret() {
+        //test "ladder" "ladder" "ladder" "ladder" "ladder" "ladder"
         String[] words = {"grape", "orange", "red", "ladder", "shoe", "dare"};
         return this.secret = words[getRandonmNumber()].toCharArray();
     }
-
-    public char[] getGuess() {
-        int i = 0;
-        char[] guess = new char[getSecret().length];
-        while(i< secret.length){
-            guess[i] += '_';
-            i++;
-        }
-        return guess;
-    }
-
-    public char[] getUserInput() {
-       return scanner.nextLine().toCharArray();
-    }
-
 }
-
 
 
 
